@@ -1,14 +1,9 @@
 import { generateChineseName } from '@/utils/nameGenerator';
 
-interface HunyuanResponse {
+interface NameResult {
   chinese: string;
   pinyin: string;
-  meaning: string;
-  cultural: string;
-}
-
-interface APIError {
-  error: string;
+  onlineName: string;
 }
 
 export async function generateNameWithHunyuan(
@@ -16,7 +11,7 @@ export async function generateNameWithHunyuan(
   lastName: string,
   gender: string,
   style: string
-): Promise<HunyuanResponse> {
+): Promise<NameResult> {
   try {
     // 暂时使用本地生成器
     return generateChineseName(firstName, lastName, gender, style);

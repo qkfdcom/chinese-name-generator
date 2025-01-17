@@ -11,7 +11,7 @@ export function generateChineseName(
   firstName: string,
   lastName: string,
   gender: string,
-  style: string
+  _style: string
 ): NameResult {
   const surname = getRandomElement(surnames);
   const nameArray = gender === 'female' ? femaleNames : maleNames;
